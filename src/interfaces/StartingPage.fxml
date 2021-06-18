@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="startingPagePane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StartingPage">
+   <left>
+      <VBox alignment="CENTER" minWidth="-Infinity" prefWidth="190.0" style="-fx-background-color: #4c0083;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="logo" fitHeight="130.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../templates/logo4-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="26.0" prefWidth="141.0" text="myFitnessBuddy" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <GridPane alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="475.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="528.0" minHeight="10.0" prefHeight="409.2" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="589.5999999999999" minHeight="10.0" prefHeight="445.59999999999997" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="welcome" text="Welcome" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="30.0" top="70.0" />
+               </GridPane.margin>
+            </Label>
+            <Button fx:id="buttonRegister" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onRegisterButtonClicked" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #4C0083;" text="Register Now" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="30.0" top="30.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="achieve" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="450.0" text="Do you want to achieve your fitness body?" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets left="30.0" top="150.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="start" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="450.0" text="Start now, track calories, analyze ingredients and record activities!&#10;" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets left="30.0" top="190.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="login" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onLoginHyperLinkClicked" prefHeight="30.0" text="Login" textFill="#4c0083" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets left="210.0" top="89.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Label fx:id="account" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" text="Already have an account?" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets left="30.0" top="90.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

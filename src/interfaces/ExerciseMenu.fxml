@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="exerciseMenuPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ExerciseMenu">
+   <center>
+      <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="710.0">
+         <children>
+            <GridPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="710.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                        <Label alignment="CENTER" contentDisplay="TOP" text="Exercise Menu" textFill="#4c0083" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                            <font>
+                                <Font name="System Bold" size="33.0" />
+                            </font>
+                        </Label>
+               </children>
+            </GridPane>
+              <GridPane fx:id="addExercisePane" layoutY="100.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="710.0" visible="false">
+                  <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                  <children>
+                        <MenuButton fx:id="exerciseType" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Choose Type" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                            <items>
+                        <MenuItem fx:id="noFilterChoice" mnemonicParsing="false" onAction="#noFilterButton" text="No filter" />
+                                <MenuItem fx:id="aerobic" mnemonicParsing="false" onAction="#aerobicChoiceButton" text="Aerobic" />
+                                          <MenuItem fx:id="strength" mnemonicParsing="false" onAction="#strengthChoiceButton" text="Strength" />
+                                <MenuItem fx:id="flexibility" mnemonicParsing="false" onAction="#flexibilityChoiceButton" text="Flexibility" />
+                            </items>
+                     <GridPane.margin>
+                        <Insets bottom="150.0" left="220.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                        </MenuButton>
+                        <Button fx:id="addExerciseButton" mnemonicParsing="false" onMouseClicked="#addExerciseHistory" text="Add Exercise" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="300.0" top="20.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <ComboBox fx:id="exerciseChoice" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="150.0" promptText="Choose Exercise" visibleRowCount="5" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="150.0" left="30.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ComboBox>
+                        <Label text="Duration (min) " GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="25.0" left="30.0" />
+                     </GridPane.margin>
+                  </Label>
+                        <TextField fx:id="duration" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="400.0" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="30.0" top="20.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label fx:id="noExerciseSelected" text="No exercise selected!" textFill="RED" visible="false" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="30.0" top="75.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="noDuration" layoutX="277.0" layoutY="199.0" text="Invalid Duration!" textFill="RED" visible="false" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="30.0" top="75.0" />
+                     </GridPane.margin>
+                  </Label>
+                  </children>
+              </GridPane>
+            <GridPane fx:id="planPane" layoutY="100.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="710.0" style="-fx-border-color: none;" visible="false">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#addExPlanFunc" prefHeight="26.0" prefWidth="140.0" style="-fx-border-color: none;" text="Add exercise to plan" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="120.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#seePlanFunc" prefHeight="26.0" prefWidth="140.0" text="Show current Plan" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets right="50.0" top="145.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                        <Button fx:id="addPlanHistory" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#addPlanToHistoryFunc" prefHeight="26.0" prefWidth="140.0" text="Add my Plan to history" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="40.0" right="50.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#getPlanFunc" prefHeight="26.0" prefWidth="140.0" text="Random Plan" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="40.0" left="120.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                        <ListView fx:id="planView" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="250.0" prefWidth="300.0" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="40.0" left="30.0" />
+                     </GridPane.margin>
+                  </ListView>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#removeExPlan" prefHeight="26.0" prefWidth="140.0" text="Remove Exercise" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets right="50.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#setAsMyPlan" prefHeight="26.0" prefWidth="140.0" text="Set as my plan" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="120.0" top="145.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <ComboBox fx:id="exChoice" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="140.0" promptText="Choose Exercise" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="155.0" left="120.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ComboBox>
+                        <MenuButton fx:id="category" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="140.0" text="Choose Category" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                            <items>
+                        <MenuItem mnemonicParsing="false" onAction="#noFilter" text="No Filter" />
+                                <MenuItem mnemonicParsing="false" onAction="#aeroFilter" text="Aerobics" />
+                                <MenuItem mnemonicParsing="false" onAction="#strengthFilter" text="Stregth" />
+                                <MenuItem mnemonicParsing="false" onAction="#flexFilter" text="Flexibility" />
+                            </items>
+                     <GridPane.margin>
+                        <Insets bottom="155.0" right="50.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                        </MenuButton>
+                        <Label text="Duration (min) " GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="270.0" left="30.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Button fx:id="clearButton" mnemonicParsing="false" onMouseClicked="#clearPlanView" prefWidth="140.0" text="Clear Plan" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="220.0" right="188.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                        <TextField fx:id="duration2" maxWidth="-Infinity" prefWidth="140.0" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="220.0" left="30.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label fx:id="planEmpty" prefHeight="26.0" prefWidth="140.0" text="Plan is empty!" textFill="RED" visible="false" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="70.0" right="50.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="planEmpty1" layoutX="529.0" layoutY="312.0" prefHeight="26.0" prefWidth="140.0" text="Plan is empty!" textFill="RED" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="220.0" left="120.0" />
+                     </GridPane.margin></Label>
+                  <Label fx:id="noExercise" layoutX="255.0" layoutY="114.0" prefHeight="26.0" prefWidth="140.0" text="No exercise to remove!" textFill="RED" visible="false" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="65.0" right="50.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="noPlanSet" layoutX="255.0" layoutY="114.0" prefHeight="26.0" prefWidth="140.0" text="No plan to set!" textFill="RED" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="120.0" top="85.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="planSet" layoutX="355.0" layoutY="239.0" prefHeight="26.0" prefWidth="140.0" text="Plan setted successfuly!" textFill="LIMEGREEN" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="120.0" top="85.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="noPlanShow" layoutX="10.0" layoutY="36.0" prefHeight="26.0" prefWidth="140.0" text="No plan to show!" textFill="RED" visible="false" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets right="50.0" top="85.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="noExSelected" layoutX="529.0" layoutY="312.0" prefHeight="26.0" prefWidth="140.0" text="No exercise selected!" textFill="RED" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="65.0" left="120.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="noDurationSelected" layoutX="355.0" layoutY="164.0" prefHeight="26.0" prefWidth="140.0" text="Duration field is empty!" textFill="RED" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="65.0" left="120.0" />
+                     </GridPane.margin></Label>
+                  <Label fx:id="incorrectDuration" layoutX="355.0" layoutY="164.0" prefHeight="26.0" prefWidth="140.0" text="Incorrect duration!" textFill="RED" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="65.0" left="120.0" />
+                     </GridPane.margin></Label>
+               </children>
+            </GridPane>
+            <GridPane fx:id="exerciseHistoryPane" layoutY="100.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="710.0" visible="false">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                        <Button fx:id="todayHistory" mnemonicParsing="false" onMouseClicked="#todayHistoryFunc" prefHeight="30.0" prefWidth="100.0" text="Today History" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="220.0" left="55.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                        <Button fx:id="entireHistory" mnemonicParsing="false" onMouseClicked="#entireHistoryFunc" prefHeight="30.0" prefWidth="100.0" text="Entire History" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="220.0" left="200.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                        <ListView fx:id="historyCart" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="600.0" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="30.0" />
+                     </GridPane.margin>
+                  </ListView>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+   </center>
+   <left>
+          <GridPane prefHeight="400.0" prefWidth="190.0" style="-fx-background-color: #4c0083;" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+              <children>
+                  <ImageView fitHeight="130.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                      <image>
+                          <Image url="@../templates/logo4-removebg-preview.png" />
+                      </image>
+               <GridPane.margin>
+                  <Insets bottom="60.0" />
+               </GridPane.margin>
+                  </ImageView>
+                  <Button fx:id="addExercise" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#addExerciseFunc" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #FFFFFF;" text="Add Exercise" textFill="#4c0083" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                      <font>
+                          <Font name="System Bold" size="13.0" />
+                      </font>
+               <GridPane.margin>
+                  <Insets bottom="200.0" right="10.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                  </Button>
+                  <Button fx:id="exercisesHistory" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#exerciseHistoryFunc" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #FFFFFFFF;" text="Exercise History" textFill="#4c0083" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                      <font>
+                          <Font name="System Bold" size="13.0" />
+                      </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                  </Button>
+                        <Button fx:id="backButton" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#backToHomePageFunc" prefHeight="30.0" prefWidth="50.0" style="-fx-background-color: #FFFFFF;" text="BACK" textAlignment="CENTER" textFill="#4c0083" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                      <GridPane.margin>
+                          <Insets left="15.0" top="15.0" />
+                      </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                  </Button>
+            <Button fx:id="backExerciseMenu" alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="25.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#backToExerciseFunc" prefHeight="30.0" prefWidth="50.0" style="-fx-background-color: #FFFFFF;" text="BACK" textAlignment="CENTER" textFill="#4c0083" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="15.0" top="15.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+                  <Button fx:id="plan" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#planPaneFunc" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #FFFFFF;" text="Plan Menu" textFill="#4c0083" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                      <font>
+                          <Font name="System Bold" size="13.0" />
+                      </font>
+               <GridPane.margin>
+                  <Insets bottom="100.0" right="10.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                  </Button>
+            <Label text="myFitnessBuddy" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="30.0" />
+               </GridPane.margin>
+            </Label>
+              </children>
+          </GridPane>
+   </left>
+</BorderPane>

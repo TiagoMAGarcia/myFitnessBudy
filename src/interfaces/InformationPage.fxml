@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.InformationPage">
+   <content>
+      <BorderPane fx:id="informationPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="825.0" prefWidth="855.0">
+         <left>
+            <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="190.0" style="-fx-background-color: #4c0083;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="logo1" fitHeight="143.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../templates/logo4-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" text="myFitnessBuddy" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="825.0" prefWidth="665.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" prefHeight="100.0" />
+                  <RowConstraints maxHeight="-Infinity" prefHeight="100.0" />
+                  <RowConstraints maxHeight="-Infinity" prefHeight="100.0" />
+                  <RowConstraints maxHeight="-Infinity" prefHeight="100.0" />
+                  <RowConstraints maxHeight="-Infinity" prefHeight="100.0" />
+                  <RowConstraints maxHeight="-Infinity" prefHeight="100.0" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="100.0" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="78.0" prefWidth="327.0" text="USER INFORMATION" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font name="System Bold" size="33.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                           </GridPane.margin>
+                  </Label>
+                  <Label prefHeight="20.0" prefWidth="72.0" text="Height(cm)" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="45.0" left="30.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="height" maxHeight="26.0" maxWidth="200.0" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="30.0" top="10.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label text="Weight" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="45.0" left="30.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="weight" maxHeight="26.0" maxWidth="200.0" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="30.0" top="10.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label text="Age" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="45.0" left="30.0" />
+                     </GridPane.margin>
+                     <font>
+                          <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="age" maxHeight="26.0" maxWidth="200.0" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="30.0" top="10.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label text="Activity Level" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="47.0" left="30.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="activityLevel" prefHeight="26.0" prefWidth="200.0" promptText="Choose the activity level..." GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ComboBox>
+                  <Label text="Gender" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="45.0" left="30.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="male" mnemonicParsing="false" text="Male" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="30.0" top="10.0" />
+                       </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </RadioButton>
+                  <RadioButton fx:id="female" mnemonicParsing="false" text="Female" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets right="45.0" top="10.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </RadioButton>
+                        <Label text="Objective" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="45.0" left="30.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="lose" mnemonicParsing="false" text="Lose Weight" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="30.0" top="10.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </RadioButton>
+                  <RadioButton fx:id="maintain" mnemonicParsing="false" text="Maintain Weight" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets top="10.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </RadioButton>
+                  <RadioButton fx:id="gain" mnemonicParsing="false" text="Gain Weight" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets right="50.0" top="10.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </RadioButton>
+                  <Button fx:id="finishedButton" mnemonicParsing="false" onMouseClicked="#finished" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #4C0083;" text="Finished" textFill="WHITE" GridPane.rowIndex="7">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="30.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="backToRegisterButton" disable="true" mnemonicParsing="false" onMouseClicked="#backToRegister" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #4C0083;" text="Back" textFill="WHITE" visible="false" GridPane.halignment="RIGHT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" right="50.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="backToSettingsButton" disable="true" layoutX="320.0" layoutY="748.0" mnemonicParsing="false" onMouseClicked="#backToSettings" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #4C0083;" text="Back" textFill="WHITE" visible="false" GridPane.halignment="RIGHT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" right="50.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label fx:id="heightFieldEmpty" text="Invalid height!" textFill="RED" visible="false" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="13.0" left="30.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="weightFieldEmpty" layoutX="40.0" layoutY="190.0" text="Invalid weight!" textFill="RED" visible="false" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="13.0" left="30.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="ageFieldEmpty" layoutX="10.0" layoutY="261.0" text="Invalid age!" textFill="RED" visible="false" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="13.0" left="30.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="activityFieldEmpty" layoutX="10.0" layoutY="361.0" text="No activity selected!" textFill="RED" visible="false" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="13.0" left="30.0" />
+                     </GridPane.margin>
+                        </Label>
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </content>
+</ScrollPane>

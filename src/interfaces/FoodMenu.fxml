@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="foodMenuPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FoodMenu">
+   <center>
+      <Pane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <GridPane layoutX="5.0" prefHeight="100.0" prefWidth="700.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" contentDisplay="TOP" text="Food Menu" textFill="#4c0083" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font name="System Bold" size="33.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <GridPane fx:id="addFoodPane" layoutY="100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" visible="false">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <MenuButton fx:id="category" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#categoryClicked" prefWidth="150.0" text="Choose Category" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#noFilterFood" text="No Filter" />
+                      <MenuItem mnemonicParsing="false" onAction="#dairyFilter" text="Dairy" />
+                      <MenuItem mnemonicParsing="false" onAction="#fatFilter" text="Fat And Oils" />
+                        <MenuItem mnemonicParsing="false" onAction="#proteinFilter" text="Protein" />
+                        <MenuItem mnemonicParsing="false" onAction="#fruitsFilter" text="Fruits And Vegetables" />
+                        <MenuItem mnemonicParsing="false" onAction="#cerealsFilter" text="Cereals And Derivatives" />
+                        <MenuItem mnemonicParsing="false" onAction="#saltFilter" text="Salt Products" />
+                        <MenuItem mnemonicParsing="false" onAction="#sugarFilter" text="Sugar Products" />
+                        <MenuItem mnemonicParsing="false" onAction="#legFilter" text="Leguminous" />
+                        <MenuItem mnemonicParsing="false" onAction="#drinkFilter" text="Drinks" />
+                    </items>
+                     <GridPane.margin>
+                        <Insets bottom="155.0" right="30.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MenuButton>
+                  <Button fx:id="confirmCartButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#confirmCartFunc" prefHeight="25.0" prefWidth="150.0" text="Confirm Cart" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="40.0" left="150.0" right="30.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="removeFoodFromCartButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#removeFoodFromCart" prefHeight="25.0" prefWidth="150.0" text="Remove Food" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="25.0" right="30.0" top="90.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="addFoodToCartButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#addFoodToCart" prefHeight="25.0" prefWidth="150.0" text="Add Food" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="25.0" left="150.0" top="90.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="cartCaloriesButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#cartCaloriesFunc" prefHeight="25.0" prefWidth="150.0" text="Cart Calories" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="40.0" left="150.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="360.0" layoutY="344.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clearCartList" prefHeight="25.0" prefWidth="140.0" text="Clear Cart" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <GridPane.margin>
+                        <Insets left="30.0" top="77.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <ListView fx:id="cartList" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="300.0" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="40.0" left="30.0" />
+                     </GridPane.margin>
+                  </ListView>
+                  <Label fx:id="cartLabel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" text="Cart:" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets left="30.0" top="50.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="cartCalories" contentDisplay="CENTER" layoutX="40.0" layoutY="92.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="265.0" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets left="65.0" top="50.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="foodChoice" centerShape="false" onMouseClicked="#foodChoiceClicked" prefHeight="25.0" prefWidth="150.0" promptText="Choose Food" visibleRowCount="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="155.0" left="150.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ComboBox>
+                  <Label fx:id="noFoodSelected" prefWidth="150.0" text="Did not select any food!" textFill="RED" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="150.0" top="120.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="noFoodRemoveSelected" minHeight="-Infinity" minWidth="-Infinity" prefWidth="150.0" text="Did not select any food!" textFill="RED" visible="false" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets right="30.0" top="120.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="cartEmpty" minHeight="-Infinity" minWidth="-Infinity" prefWidth="150.0" text="Cart is empty!" textFill="RED" visible="false" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="70.0" right="30.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="cartEmpty1" layoutX="528.0" layoutY="321.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="120.0" text="Cart is empty!" textFill="RED" visible="false" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets left="185.0" top="80.0" />
+                     </GridPane.margin></Label>
+               </children>
+            </GridPane>
+            <GridPane fx:id="addRecipePane" layoutY="100.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" visible="false">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="220.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ListView fx:id="recipeView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="300.0" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="40.0" left="30.0" />
+                     </GridPane.margin>
+                  </ListView>
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#ingredientsFunc" prefHeight="25.0" prefWidth="150.0" text="Ingredients" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="150.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <MenuButton fx:id="categoriesRecipe" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#chooseARecipeRemove" prefHeight="25.0" prefWidth="150.0" text="Choose Category" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#noFilterRecipe" text="No Filter" />
+                      <MenuItem mnemonicParsing="false" onAction="#breakFilter" text="Breakfast" />
+                      <MenuItem mnemonicParsing="false" onAction="#highProtFilter" text="High Protein" />
+                        <MenuItem mnemonicParsing="false" onAction="#vegeFilter" text="Vegetarian" />
+                        <MenuItem mnemonicParsing="false" onAction="#lowCarbFilter" text="Low Carb" />
+                        <MenuItem mnemonicParsing="false" onAction="#gluFilter" text="Gluten Free" />
+                    </items>
+                     <GridPane.margin>
+                        <Insets bottom="155.0" right="30.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MenuButton>
+                  <ComboBox fx:id="recipeChoice" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#chooseARecipeRemove" prefHeight="25.0" prefWidth="150.0" promptText="Choose Recipe" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="155.0" left="150.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ComboBox>
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#directionsFunc" prefHeight="25.0" prefWidth="150.0" text="Directions" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="150.0" top="150.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button mnemonicParsing="false" onMouseClicked="#recipeToHistoryFunc" prefHeight="25.0" prefWidth="150.0" text="Add Recipe to History" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="40.0" right="30.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#nutritionFunc" prefHeight="25.0" prefWidth="150.0" text="Nutrition" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="40.0" left="150.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label fx:id="recipeEmpty" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" text="Choose a Recipe!" textFill="RED" visible="false" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="70.0" right="30.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="recipeLabel" layoutX="528.0" layoutY="314.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="300.0" wrapText="true" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets left="30.0" top="50.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Label>
+               </children>
+            </GridPane>
+            <GridPane fx:id="historyPane" layoutY="100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="710.0" visible="false">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ListView fx:id="historyView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="600.0" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="40.0" />
+                     </GridPane.margin>
+                  </ListView>
+                  <Button mnemonicParsing="false" onMouseClicked="#todayHistoryFunc" prefHeight="30.0" prefWidth="115.0" text="Today's History" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="235.0" left="55.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button mnemonicParsing="false" onMouseClicked="#totalHistoryFunc" prefHeight="30.0" prefWidth="115.0" text="Total History" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="235.0" left="230.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+   </center>
+   <left>
+      <GridPane minHeight="-Infinity" minWidth="-Infinity" prefWidth="190.0" style="-fx-background-color: #4c0083;" BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ImageView fitHeight="130.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@../templates/logo4-removebg-preview.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets bottom="60.0" />
+               </GridPane.margin>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="myFitnessBuddy" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Button fx:id="addFoodButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#addFoodFunc" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #FFFFFF;" text="Add Food" textFill="#4c0083" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="200.0" right="10.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="addRecipeButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#addRecipeFunc" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #FFFFFF;" text="Add Recipe" textFill="#4c0083" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="100.0" right="10.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="foodHistoryButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#foodHistoryFunc" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #FFFFFF;" text="Food History" textFill="#4c0083" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="backButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#backToHomePageFunc" prefHeight="30.0" prefWidth="50.0" style="-fx-background-color: #FFFFFF;" text="BACK" textFill="#4c0083" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="15.0" top="15.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="backToFoodMenuButton" alignment="CENTER" disable="true" layoutX="25.0" layoutY="25.0" mnemonicParsing="false" onMouseClicked="#backToFoodMenuFunc" prefHeight="30.0" prefWidth="50.0" style="-fx-background-color: #FFFFFF;" text="BACK" textFill="#4c0083" visible="false" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="15.0" top="15.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </GridPane>
+   </left>
+</BorderPane>

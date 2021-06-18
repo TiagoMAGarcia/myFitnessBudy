@@ -1,0 +1,57 @@
+bicycling general-aerobics-7.5
+bicycling vigorous-aerobics-14.0
+bicycling stationary-aerobics-7.0
+bicycling stationary vigorous-aerobics-11.0
+calisthenics(push ups, pull ups, jumping jacks) vigorous-strength-8.0
+calisthenics(push ups, pull ups, lunges) moderate-strength-3.8
+calisthenics(situps, abdominal crunches), light-strength-2.8
+elliptical-aerobics-5.0
+resistance training(weight lifting, power lifting, body building)-strength-6.0
+rope skipping general-strength-12.3
+rowing stationary vigorous-strength-6.0
+rowing stationary moderate-strength-4.8
+pilates general-flexibility-3.0
+yoga general-flexibility-3.0
+dancing general-aerobics-7.3
+fishing general-aerobics-3.5
+hunting general-aerobics-5.0
+kitchen activity general-aerobics-3.3
+moving furniture-strength-5.8
+carpentry-strength-3.8
+home repair-strength-4.5
+jogging general-aerobics-7.0
+jogging treadmill-aerobics-8.0
+running-aerobics-8.0
+running marathon-aerobics-13.3
+badminton social-aerobics-5.5
+badminton competitive-aerobics-7.0
+basketball general-aerobics-6.5
+basketball game-aerobics-8.0
+bowling-aerobics-3.0
+boxing match-strength-12.8
+boxing punching bag-strength-5.5
+fencing-aerobics-6.0
+football-aerobics-8.0
+golf general-aerobics-4.8
+hockey general-aerobics-8.0
+hockey competitive-aerobics-10.0
+horseback riding-aerobics-6.0
+martial arts-strength-10.3
+polo-aerobics-10.0
+skateboarding-aerobics-5.5
+rollerblading-aerobics-7.0
+tennis general-aerobics-7.3
+volleyball-aerobics-4.0
+volleyball competitive-aerobics-6.0
+volleyball non competitive-aerobics-4.0
+volleyball beach-aerobics-8.0
+backpacking-aerobics-6.0
+hiking-aerobics-5.5
+climbing-aerobics-7.0
+walking-aerobics-4.0
+canoeing-aerobics-3.5
+surfing general-aerobics-3.0
+surfing competitive-aerobics-5.0
+swimming moderate-aerobics-5.8
+swimming vigorous-aerobics-9.8
+skiing general-aerobics-7.0

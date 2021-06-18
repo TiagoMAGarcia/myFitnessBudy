@@ -1,0 +1,149 @@
+Avocado-108-1.1-FruitsAndVegetables
+Pineapple Slices in syrup-95-0.2-FruitsAndVegetables
+Ananas-42-0.5-FruitsAndVegetables
+Pumpkin-10-0.3-FruitsAndVegetables
+Sugar-99-0-SugarProducts
+Cress-23-3.4-FruitsAndVegetables
+Brandy-308-0-Drinks
+Celery-11-1.1-FruitsAndVegetables
+Artichoke-41-3-FruitsAndVegetables
+Lettuce-12-1.8-FruitsAndVegetables
+Garlic-66-3.8-FruitsAndVegetables
+Meatballs-284-40.4-Proteins
+White plum-35-0.6-FruitsAndVegetables
+Red plum-35-0.8-FruitsAndVegetables
+Almond-619-21.6-FruitsAndVegetables
+Coca Cola-105-0-Drinks
+Ice Tea-63-0.3-Drinks
+Roasted peanuts-587-25.6-FruitsAndVegetables
+Maize starch-364-0.4-CerealsAndDerivatives
+Cooked white rice-124-2.5-CerealsAndDerivatives
+Tuna in oil-214-24.3-Proteins
+Rolled oats-353-13.5-CerealsAndDerivatives
+Hazelnut-203-4.2-FruitsAndVegetables
+Olive oil-225-0-FatAndOils
+Olive-172-1.4-FruitsAndVegetables
+Codfish-80-19-Proteins
+Diced bacon-367-13.8-Proteins
+Banana-97-1.6-FruitsAndVegetables
+Lard-179-0-FatAndOils
+Baked potato-87-2.5-CerealsAndDerivatives
+French fries-222-3.7-CerealsAndDerivatives
+Cockle-59-10.5-Proteins
+Eggplant-16-1.1-FruitsAndVegetables
+Beet-18-1-FruitsAndVegetables
+Fried beef steak without sauce-183-28.8-Proteins
+Cracker water and salt-50-1.6-SaltProducts
+Whole wafer-66-1.3-SugarProducts
+Broccoli-27-3.4-FruitsAndVegetables
+Dogfish-82-20-Proteins
+Shrimp-77-17.6-Proteins
+Chicken meat-110-22.9-Proteins
+Beef breast chicken-107-24.1-Proteins
+Turkey breast meat-105-23.4-Proteins
+Pork spare ribs-190-19.6-Proteins
+Pork tenderloin-131-22.2-Proteins
+Beef Cutlet-121-20-Proteins
+Beef Steak-122-20.9-Proteins
+Carrot-20-0.6-FruitsAndVegetables
+Cherry-63-0.8-FruitsAndVegetables
+Beer-29-0.4-Drinks
+Beer without alcohol-7-0.3-Drinks
+Chicory-99-1-FruitsAndVegetables
+Rabbit meat-117-20.3-Proteins
+Mushroom-14-1.8-FruitsAndVegetables
+Brussels sprouts-43-3.5-FruitsAndVegetables
+Cauliflower-30-3.7-FruitsAndVegetables
+Fresh apricot-38-0.8-FruitsAndVegetables
+Dried apricot-195-5.4-FruitsAndVegetables
+Frozen grain peas-54-5.3-Leguminous
+Asparagus-19-2.1-FruitsAndVegetables
+Cooked spaghetti-99-3.4-CerealsAndDerivatives
+Spinach-22-2.6-FruitsAndVegetables
+Cassava-159-1.4-FruitsAndVegetables
+Corn-96-3.4-CerealsAndDerivatives
+Wheat-316-15-CerealsAndDerivatives
+Wheat bran-250-15.1-CerealsAndDerivatives
+Dry broad bean-246-25.8-Leguminous
+Dry black beans-323-22.6-Leguminous
+Dry butter beans-270-21.8-Leguminous
+Pork ham-304-18-Proteins
+Fresh fig-73-0.7-FruitsAndVegetables
+Dried fig-248-2.3-FruitsAndVegetables
+Corn flakes-366-7.9-CerealsAndDerivatives
+Wheat flakes-355-14-CerealsAndDerivatives
+Cooked pasta-99-3.4-CerealsAndDerivatives
+Water ice cream (ice cream)-132-0.4-SugarProducts
+Strawberry candy-36-0-SugarProducts
+Chickpeas-327-19-Leguminous
+Cow hamburger (meat)-142-20.2-Proteins
+Low fat yogurt-51-5.8-Dairy
+Natural yogurt MG-66-5.3-Dairy
+Yogurt MG sugary aroma-90-4.7-Dairy
+Ketchup-18-0.3-SugarProducts
+Lobster-90-20.6-Proteins
+Orange-84-2.2-FruitsAndVegetables
+Condensed milk-338-7.8-Dairy
+UHT MG Milk-47-3.3-Dairy
+UHT skim milk-35-3.4-Dairy
+Powdered milk MG-85-6.1-Dairy
+Skimmed milk powder-72-7-Dairy
+Lentils-298-25.2-Leguminous
+Lemon-12-0.5-FruitsAndVegetables
+Sole-82-20.1-Proteins
+Sausage-437-21.5-Proteins
+Squid-71-15.8-Proteins
+Apple-59-0.2-FruitsAndVegetables
+Mango-52-0.5-FruitsAndVegetables
+Butter-37-0-Dairy
+Common Margarine-26-0-Dairy
+Honey-63-0.1-SugarProducts
+Watermelon-25-0.4-FruitsAndVegetables
+Melon-28-0.6-FruitsAndVegetables
+Mussels-70-12.1-Proteins
+Bechamel sauce-26-0.8-Dairy
+Tomato Sauce-21-0.2-FruitsAndVegetables
+Strawberry-27-0.6-FruitsAndVegetables
+Bologna-379-18.3-Proteins
+Chocolate mousse-280-9.5-SugarProducts
+Turnip-17-0.4-FruitsAndVegetables
+Cream-323-2.2-Dairy
+Nuts-207-5-CerealsAndDerivatives
+Cooking oil-224-0-FatAndOils
+Corn oil-224-0-FatAndOils
+Whole egg-90-7.8-Proteins
+Egg (Clara)-14-3.3-Proteins
+Egg yolk-68-3.2-Proteins
+Rye bread-256-5.9-CerealsAndDerivatives
+Whole wheat bread-217-7.6-CerealsAndDerivatives
+Bread mix-264-9-CerealsAndDerivatives
+Papaya-40-0.6-FruitsAndVegetables
+Meat Duck breast-133-19.3-Proteins
+Cucumber-18-1.4-FruitsAndVegetables
+Pear-57-0.4-FruitsAndVegetables
+Hake-81-17.2-Proteins
+Peach in syrup-84-0.2-FruitsAndVegetables
+Peach-38-0.6-FruitsAndVegetables
+Pinion-618-33.2-CerealsAndDerivatives
+Pistachio-599-18-CerealsAndDerivatives
+Octopus-73-15.6-Proteins
+Ham-215-25-Proteins
+Milk and egg pudding-245-5.9-SugarProducts
+Camembert cheese-254-19.2-Dairy
+Emental cheese-383-28.9-Dairy
+Flemish Cheese-315-26-Dairy
+Parmesan cheese-401-37.7-Dairy
+Radish-13-1-FruitsAndVegetables
+Creamy cheese-150-8-Dairy
+Fresh salmon-262-16.2-Proteins
+Raw sardines-158-18.9-Proteins
+Tangerine-39-0.7-FruitsAndVegetables
+Tomato-20-0.8-FruitsAndVegetables
+Toast-283-8.4-CerealsAndDerivatives
+Toast + butter-430-8-CerealsAndDerivatives
+Trout-92-17.8-Proteins
+Pass grape-282-1.8-FruitsAndVegetables
+Grape-80-0.3-FruitsAndVegetables
+White wine-72-0.1-Drinks
+Red wine-65-0.1-Drinks
+whiskey-222-0-Drinks
